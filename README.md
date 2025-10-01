@@ -31,7 +31,7 @@ This setup allows you to stream music directly from **YouTube, Spotify, or local
 | **DIN**      | GPIO **25** |
 | **VIN**      | 5V (recommended for best audio output) |
 | **GND**      | GND |
-| **SD**       | GND (keeps amplifier enabled) |
+| **SD**       | leave floating or tie to 3.3V (ON) |
 | **GAIN**     | Floating = 15 dB, GND = 9 dB, 3.3V = 18 dB |
 
 🔊 **Speaker Connection:** connect the speaker across `OUT+` and `OUT-` (do **not** connect to GND).
@@ -63,20 +63,6 @@ Also, ensure you have the latest **ESP32 board support package** (version `2.0.x
 - Place your speaker in a **small enclosure or box** to improve volume and bass response.  
 - Check **phone Bluetooth settings**: disable *Absolute Volume* in Android developer options if volume is capped.  
 
----
-
-## 📸 Wiring Diagram Reference
-
-```
- MAX98357   ->   ESP32
-  LRC (WS)  ->   GPIO 26
-  BCLK      ->   GPIO 27
-  DIN       ->   GPIO 25
-  VIN       ->   5V
-  GND       ->   GND
-  SD        ->   GND
-  GAIN      ->   Floating / GND / 3.3V
-```
 
 ---
 
